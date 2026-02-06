@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dream Travel Agency</title>
+
+<style>
+
+/* GENERAL */
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f7fa;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#0077b6,#00b4d8);
+  padding:15px;
+  color:white;
+  text-align:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:15px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  border-bottom:2px solid white;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:40px;
+  background:white;
+}
+
+.hero img{
+  width:90%;
+  max-width:1000px;
+  height:420px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.hero h2{
+  margin-top:20px;
+  font-size:32px;
+  color:#333;
+}
+
+/* BUTTON */
+button{
+  padding:14px 25px;
+  font-size:16px;
+  background:#0077b6;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+button:hover{
+  background:#023e8a;
+}
+
+/* DESTINATIONS CARDS */
+.cards{
+  text-align:center;
+  padding:30px;
+}
+
+.card{
+  display:inline-block;
+  background:white;
+  margin:15px;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 5px 12px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card img{
+  width:280px;
+  height:180px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>✈️ Dream Travel Agency</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">about</a>
+<a href="service.html">service</a>
+<a href="destinations.html">destinations</a>
+<a href="booking.html">Booking</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+<img src="traval pic.avif">
+
+<h2>Explore The World With Us 🌍</h2>
+
+<p>Your journey begins here.</p>
+
+<button onclick="start()">Start Your Journey</button>
+
+<p id="msg"></p>
+
+</section>
+
+</section>
+
+<footer>
+© 2026 Dream Travel Agency  
+Explore • Dream • Discover
+</footer>
+
+<script>
+function start(){
+ document.getElementById("msg").innerHTML=
+ "✅ Let's plan your trip today!";
+}
+</script>
+
+</body>
+</html>

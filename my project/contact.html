@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f8;
+}
+
+.contact-box{
+    width:400px;
+    margin:50px auto;
+    padding:25px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h2{
+    color:#0077b6;
+}
+
+input, textarea{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#0077b6;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#023e8a;
+}
+
+.info{
+    margin-top:20px;
+    text-align:left;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-box">
+<h2>Contact Us</h2>
+
+<form onsubmit="return validateForm()">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea id="message" rows="4" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+
+<div class="info">
+<p>📍 Location: Mogadishu, Somalia</p>
+<p>📞 Phone: +252 612429289</p>
+<p>✉ Email: info@Dreamtravelagency.com</p>
+</div>
+
+</div>
+
+<script>
+function validateForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if(name=="" || email=="" || message==""){
+        alert("Please fill all fields!");
+        return false;
+    }
+
+    if(!email.includes("@")){
+        alert("Enter a valid email!");
+        return false;
+    }
+
+    alert("Message Sent Successfully!");
+    return true;
+    
+}
+
+
+</script>
+<a href="index.html">
+<button>Back to Home</button>
+</a>
+</body>
+</html>

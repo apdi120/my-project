@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booking</title>
+
+<style>
+
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f4f6f8;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#0077b6,#218ea4);
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+nav a{
+  color:white;
+  margin:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* SECTION */
+section{
+  padding:30px;
+  text-align:center;
+}
+
+/* HERO IMAGE */
+.hero{
+  width:90%;
+  max-width:900px;
+  height:420px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* CARDS */
+.card{
+  background:white;
+  padding:15px;
+  margin:15px;
+  display:inline-block;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card img{
+  width:300px;
+  height:200px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* BUTTONS */
+button{
+  padding:12px 20px;
+  background:#9e8f97;
+  color:rgb(152, 71, 71);
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+button:hover{
+  background:#023e8a;
+}
+
+/* INPUTS */
+input,select{
+  padding:12px;
+  margin:8px;
+  width:250px;
+  border-radius:6px;
+  border:1px solid gray;
+}
+
+/* FOOTER */
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Book Your Trip</h1>
+<a href="index.html">Home</a>
+</header>
+
+<h3>Booking Form</h3>
+
+<input id="name" placeholder="Full Name"><br>
+
+<select id="place">
+<option>maleysia</option>
+<option>Kenya</option>
+<option>maldeves</option>
+</select><br>
+
+<input id="num" type="number" placeholder="Travelers"><br>
+
+<button onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calc(){
+ let n=document.getElementById("name").value;
+ let t=document.getElementById("num").value;
+ let p=document.getElementById("place").value;
+
+ if(n==""||t==""){
+  result.innerHTML="❌ Fill all fields";
+  return;
+ }
+
+ if(t<=0){
+  result.innerHTML="❌ Invalid number";
+  return;
+ }
+
+ let price=0;
+
+ if(p=="maleysia") price=800;
+ if(p=="Kenya") price=300;
+ if(p=="maldeves") price=250;
+
+ let total=price*t;
+
+ result.innerHTML="✅ Booking successful<br>Total: $"+total;
+}
+</script>
+
+</body>
+</html>
